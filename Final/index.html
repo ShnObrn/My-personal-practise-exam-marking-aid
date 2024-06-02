@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non-descript SY0-701 Practice Exam Marking Aid</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .question {
+        margin-bottom: 10px;
+      }
+      .question input[type="text"] {
+        width: 50px;
+      }
+      .question select {
+        margin-left: 10px;
+      }
+      #results {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      .incorrect {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Professor Messer's SY0-701 Practice Exam Help Sheet</h1>
+    <label for="examSelect">Select Practice Exam: </label>
+    <select id="examSelect" onchange="updateQuestions()">
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+    </select>
+    <p>
+      <strong>Note:</strong>
+      <li>Questions with multiple answers must be separated by a comma</li>
+      <li>The first 5 questions must be marked beforehand and entered here</li>
+    </p>
+    <div id="questionsContainer"></div>
+    <button onclick="submitAnswers()">Submit</button>
+    <div id="results"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
